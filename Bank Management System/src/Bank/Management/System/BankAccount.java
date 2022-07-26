@@ -49,9 +49,27 @@ public class BankAccount{
 
     //Realizar transferências
 
-    //Tipo de conta (corrente, poupança, universitária...)
-
     //Mostrar informações da conta
+    protected void accDetails(char accDet){
+        if(accountType == 'a'){
+            System.out.println("Você possui uma Conta Corrente:");
+            System.out.println(" - Limitado a 24 saques por mês;");
+            System.out.println(" - Limitado a realizar 4 transferências;");
+            System.out.println(" - Tarifa de R$14,60 ao mês;\n");
+        }
+        else if (accountType == 'b') {
+            System.out.println("Você possui uma Conta Poupança:");
+            System.out.println(" - Limitado a 8 saques por mês;");
+            System.out.println(" - Limitado a realizar 3 transferências;");
+            System.out.println(" - Taxa de rendimento de 0,5% ao mês;\n");
+        }
+        else if (accountType == 'c'){
+            System.out.println("Você possui uma Conta Universitária:");
+            System.out.println(" - Limitado a 16 saques por mês;");
+            System.out.println(" - Limitado a realizar 2 transferências;");
+            System.out.println(" - Tarifa de R$4,55 ao mês;\n");
+        }
+    }
 
     //Mostrar limite de cheque especial
 
@@ -71,7 +89,7 @@ public class BankAccount{
             System.out.println("c) - Fazer um depósito");
             System.out.println("d) - Exibir últimas 5 transações");
             System.out.println("e) - Alterar limite de cheque especial");
-            System.out.println("f) - Exibir tipo e detalhes da conta");
+            System.out.println("f) - Exibir detalhes da conta");
             System.out.println("g) - Finalizar operações.");
             option = sc.next().charAt(0);
             switch (option){
@@ -103,6 +121,7 @@ public class BankAccount{
                     System.in.read();
                     break;
                 case 'f':
+                    accDetails(accountType);
                     System.out.println("Tecle Enter para retornar ao menu inicial...");
                     System.in.read();
                     break;
