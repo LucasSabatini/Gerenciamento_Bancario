@@ -7,7 +7,7 @@ public class BankAccount{
     String username;
     String accountPassword;
     char accountType;
-    double balance = 100;
+
     double[] prevTrans = new double[5];
 
     //Create Account
@@ -17,60 +17,7 @@ public class BankAccount{
         this.accountType = accountType;
     }
 
-    //Show account balance
-    protected void showBalance() {
-        System.out.println("O seu saldo é: R$" + balance);
-    }
-
-    //Make a withdraw
-    protected void dowithdraw(double amountWit){
-        if (amountWit > 0 && balance >= amountWit){
-            balance -= amountWit;
-            System.out.println("Seu saque de R$" + amountWit + " foi realizado.");
-        }
-        else{
-            System.out.println("Você não possui saldo suficiente para realizar este saque.");
-        }
-    }
-
-    //Make a deposit
-    protected void dodeposit(double amountDep){
-        if(amountDep > 0){
-            System.out.println("Seu depósito de R$" + amountDep + " foi realizado.");
-            balance += amountDep;
-            System.out.println("Seu novo saldo é de R$" + balance);
-        }
-        else{
-            System.out.println("Digite um valor válido para o depósito.");
-        }
-    }
-
     //Realizar transferências
-
-    //Mostrar informações da conta
-    protected void accDetails(char accDet){
-        if(accountType == 'a'){
-            System.out.println("Você possui uma Conta Corrente:");
-            System.out.println(" - Limitado a 24 saques por mês;");
-            System.out.println(" - Limitado a realizar 4 transferências;");
-            System.out.println(" - O limite de cheque especial para esse tipo de conta: R$1000,00");
-            System.out.println(" - Tarifa de R$14,60 ao mês;\n");
-        }
-        else if (accountType == 'b') {
-            System.out.println("Você possui uma Conta Poupança:");
-            System.out.println(" - Limitado a 8 saques por mês;");
-            System.out.println(" - Limitado a realizar 3 transferências;");
-            System.out.println(" - Esse tipo de conta não possui cheque especial.");
-            System.out.println(" - Taxa de rendimento de 0,5% ao mês;\n");
-        }
-        else if (accountType == 'c'){
-            System.out.println("Você possui uma Conta Universitária:");
-            System.out.println(" - Limitado a 16 saques por mês;");
-            System.out.println(" - Limitado a realizar 2 transferências;");
-            System.out.println(" - O limite de cheque especial para esse tipo de conta: R$800,00");
-            System.out.println(" - Tarifa de R$4,55 ao mês;\n");
-        }
-    }
 
     //Mostrar limite de cheque especial
 
@@ -95,21 +42,19 @@ public class BankAccount{
             option = sc.next().charAt(0);
             switch (option){
                 case 'a':
-                    showBalance();
+                    Balance.showBalance();
                     System.out.println("Tecle Enter para retornar ao menu inicial...");
                     System.in.read();
                     break;
                 case 'b':
                     System.out.print("Digite o valor do saque: R$");
-                    double amtW = sc.nextDouble();
-                    dowithdraw(amtW);
+                    Withdraw.getWithdraw(sc.nextDouble());
                     System.out.println("Tecle Enter para retornar ao menu inicial...");
                     System.in.read();
                     break;
                 case 'c':
                     System.out.print("Digite o valor do depósito: R$");
-                    double amtD = sc.nextDouble();
-                    dodeposit(amtD);
+                    Deposito.getDeposit(sc.nextDouble());
                     System.out.println("Tecle Enter para retornar ao menu inicial...");
                     System.in.read();
                     break;
@@ -123,7 +68,7 @@ public class BankAccount{
                     System.in.read();
                     break;
                 case 'f':
-                    accDetails(accountType);
+                    AccountDetails.getAccDetails(accountType);
                     System.out.println("Tecle Enter para retornar ao menu inicial...");
                     System.in.read();
                     break;
