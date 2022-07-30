@@ -14,9 +14,10 @@ Além disso, é possível ao usuário acessar o menu do banco para utilizar as s
 O software não está conectado a nenhum banco de dados, portanto as informações de cada execução serão sempre perdidas quando o software for encerrado.
 
 Este foi o meu primeiro projeto utilizando a linguagem Java a fim de treinar alguns conceitos fundamentais de lógica de programação e conhecer melhor a estrutura da linguagem como:
-     - Classes;
-     - Atributos;
-     - Métodos;
-     - Objetos;
+    
+    - Classes;
+    - Atributos;
+    - Métodos;
+    - Objetos;
 
-     :rocket:
+:rocket:
