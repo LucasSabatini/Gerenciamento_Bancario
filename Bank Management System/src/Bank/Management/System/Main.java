@@ -5,12 +5,18 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Main{
+
+    protected static String accountPassConfirm;
+
+    protected static String getAccountPassConfirm(){
+        return accountPassConfirm;
+    }
+
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
 
         String username;
         String accountPassword;
-        String accountPassConfirm;
         char accountType;
 
         //Creating a new account
@@ -28,8 +34,8 @@ public class Main{
                 System.out.println("As senhas digitadas devem ser iguais.");
             }
         }while(!Objects.equals(accountPassword, accountPassConfirm));
-        accountType = TipoDeConta.getAccountType(); //Meet and choose an account type
-        BankAccount acc1 = new BankAccount(username, accountPassword, accountType);
+        accountType = AccountType.getAccountType(); //Meet and choose an account type
+        AccountMenu acc1 = new AccountMenu(username, accountPassword, accountType);
         acc1.menu(); //Open account menu
     }
 }
