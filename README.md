@@ -2,8 +2,21 @@
 
 ### This is a https://favtutor.com website Java Project Challenge.
 
-To start, the proposed system is a web-based project that allows you to do everything a bank would allow you to do naturally.
+O software permite ao usuário, via console, criar uma conta no banco e escolher o tipo de conta que desejará utilizar (cada uma com serviços e taxas diferenciados).
+Além disso, é possível ao usuário acessar o menu do banco para utilizar as seguintes opções:
 
-One should be able to deposit money and withdraw money from a particular account as the user desires. There should be a validation to allow only a particular amount of cash inflows at any time, as well as to allow withdraws if the balance is sufficient. There should also be the calculation of interest and its addition to the balance every month.
+    - Exibir saldo;
+    - Realizar saque;
+    - Realizar depósito;
+    - Exibir detalhes da conta;
+    - Encerrar sessão.
 
-There will be several improvements to this project in the future, including the addition of support for various types of accounts. For example, there may be a recurring deposit account that should not allow withdrawals until the due date, and the amount is automatically added to the account after the due date.
+O software não está conectado a nenhum banco de dados, portanto as informações de cada execução serão sempre perdidas quando o software for encerrado.
+
+Este foi o meu primeiro projeto utilizando a linguagem Java a fim de treinar alguns conceitos fundamentais de lógica de programação e conhecer melhor a estrutura da linguagem como:
+     - Classes;
+     - Atributos;
+     - Métodos;
+     - Objetos;
+
+     :rocket:
