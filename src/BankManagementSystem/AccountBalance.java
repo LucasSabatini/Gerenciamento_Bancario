@@ -1,0 +1,23 @@
+package BankManagementSystem;
+
+import java.text.DecimalFormat;
+import static BankManagementSystem.AccountType.accountType;
+
+public class AccountBalance {
+
+    protected static double balance;
+    protected static double balanceCU;
+
+    //Show account balance
+    protected static void showBalance() {
+        DecimalFormat dc = new DecimalFormat("0.00"); //Formatação usando duas casas após a vírgula
+        if (accountType == 'b') {
+            System.out.println("O seu saldo é: R$" + dc.format(balanceCU + (balanceCU * 0.05)));
+            balanceCU += (balanceCU * 0.05);
+            System.out.println("Taxa de rendimento de 0,5% ao mês.");
+        }
+        else {
+            System.out.println("O seu saldo é: R$" + dc.format(balance));
+        }
+    }
+}
