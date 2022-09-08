@@ -1,10 +1,12 @@
 package TextBlocks;
 
-import BankManagementSystem.AccountMenu;
+import BankManagementSystem.Accounts;
 import BankManagementSystem.WelcomeScreen;
 
+// Textblocks para reduzir o número de prints no código. O caractere '\s' adiciona um espaço em branco
+
 public abstract class Textblocks {
-    private static String tiposDeConta = """
+    private static final String tiposDeConta = """
             
             Informações da Conta Corrente:
              - Limitado a 24 saques por mês
@@ -22,11 +24,7 @@ public abstract class Textblocks {
              - Tarifa de R$4,55 ao mês
              """;
 
-    public static String getTiposDeConta() {
-        return tiposDeConta;
-    }
-
-    private static String opcaoDeConta = """
+    private static final String opcaoDeConta = """
     
     Digite a letra associada ao tipo de conta que você deseja contratar:
     a) Conta Corrente
@@ -35,11 +33,7 @@ public abstract class Textblocks {
     
     Opção desejada:\s""";
 
-    public static String getOpcaoDeConta() {
-        return opcaoDeConta;
-    }
-
-    private static String mainMenu = WelcomeScreen.getUserName() + """
+    private static final String mainMenu = Accounts.getUserName() + """
             , seja bem-vindo ao seu Banco Pessoal!
                         
             Digite a letra relacionada ao serviço que deseja utilizar:
@@ -51,7 +45,27 @@ public abstract class Textblocks {
             
             Opção desejada:\s""";
 
+    private static final String welcomeText = """
+                    
+                    ------------------------------------------------
+                                   Seja bem-vindo!
+                            *** Vamos criar sua conta! ***
+                    ------------------------------------------------
+                Digite seu Nome de Usuário:\s""";
+
+    public static String getTiposDeConta() {
+        return tiposDeConta;
+    }
+
+    public static String getOpcaoDeConta() {
+        return opcaoDeConta;
+    }
+
     public static String getMainMenu() {
         return mainMenu;
+    }
+
+    public static String getWelcomeText() {
+        return welcomeText;
     }
 }

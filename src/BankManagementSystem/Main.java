@@ -1,10 +1,10 @@
 package BankManagementSystem;
 
-import java.io.IOException;
+import static BankManagementSystem.WelcomeScreen.*;
 
 public class Main{
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         WelcomeScreen.createAccount(); //Open account create menu
         AccountMenu.menu(); //Open account menu
     }
