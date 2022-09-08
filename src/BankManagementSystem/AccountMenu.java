@@ -1,8 +1,7 @@
 package BankManagementSystem;
 
-import TextBlocks.Textblocks;
-
-import static BankManagementSystem.WelcomeScreen.sc;
+import static BankManagementSystem.WelcomeScreen.conta;
+import static BankManagementSystem.Main.sc;
 
 public class AccountMenu {
 
@@ -30,9 +29,9 @@ public class AccountMenu {
                     AccountOverdraft.getOverDraft();
                     }*/
                 case 'd' -> {
-                    AccountDetails.getAccDetails(Accounts.getAccountType());
+                    AccountDetails.getAccDetails(conta.getAccountType());
                 }
-                case 'e' -> System.out.println("\nOperações encerradas. Sessão finalizada.");
+                case 'e' -> System.out.println("\nAté a próxima, " + conta.getUserName() + "!" + "\nOperações encerradas. Sessão finalizada.");
                 default -> System.out.println("\nOpção Inválida!\nDigite uma opção válida para continuar.\n");
             }
         } while (option != 'e');

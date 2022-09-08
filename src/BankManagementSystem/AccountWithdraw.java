@@ -1,9 +1,10 @@
 package BankManagementSystem;
 
 import java.text.DecimalFormat;
-import static BankManagementSystem.AccountBalance.*;
-import static BankManagementSystem.Accounts.getAccountType;
-import static BankManagementSystem.WelcomeScreen.sc;
+
+import static BankManagementSystem.AccountBalance.balance;
+import static BankManagementSystem.AccountBalance.balanceCU;
+import static BankManagementSystem.WelcomeScreen.conta;
 
 public abstract class AccountWithdraw {
 
@@ -14,19 +15,19 @@ public abstract class AccountWithdraw {
         System.out.println("\nConfirmar saque de R$" + dc.format(amountWit));
         System.out.println("a) Sim\nb) Não");
         System.out.print("\nOpção desejada: ");
-        char confirmWit = sc.next().charAt(0);
-        sc.nextLine();
+        char confirmWit = Main.sc.next().charAt(0);
+        Main.sc.nextLine();
 
-        if(confirmWit == 'a' && amountWit > 0 && balance >= amountWit && getAccountType() == 'a') {
+        if(confirmWit == 'a' && amountWit > 0 && balance >= amountWit && conta.getAccountType() == 'a') {
             System.out.println("\nSeu saque de R$" + dc.format(amountWit) + " foi realizado.");
             balance -= amountWit;
             System.out.println("Seu novo saldo é de R$" + dc.format(balance));
         }
-        else if (confirmWit == 'a' && amountWit > 0 && balanceCU >= amountWit && getAccountType() == 'b') {
+        else if (confirmWit == 'a' && amountWit > 0 && balanceCU >= amountWit && conta.getAccountType() == 'b') {
             System.out.println("\nSeu saque de R$" + dc.format(amountWit) + " foi realizado.");
             balanceCU -= amountWit;
         }
-        else if(confirmWit == 'a' && amountWit > 0 && balance >= amountWit && getAccountType() == 'c') {
+        else if(confirmWit == 'a' && amountWit > 0 && balance >= amountWit && conta.getAccountType() == 'c') {
             System.out.println("\nSeu saque de R$" + dc.format(amountWit) + " foi realizado.");
             balance -= amountWit;
             System.out.println("Seu novo saldo é de R$" + dc.format(balance));
@@ -41,6 +42,6 @@ public abstract class AccountWithdraw {
             System.out.println("\nVocê não possui saldo suficiente para realizar este saque.");
         }
         System.out.println("\nTecle Enter para retornar ao menu inicial...");
-        sc.nextLine();
+        Main.sc.nextLine();
     }
 }

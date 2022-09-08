@@ -1,7 +1,6 @@
-package TextBlocks;
+package BankManagementSystem;
 
-import BankManagementSystem.Accounts;
-import BankManagementSystem.WelcomeScreen;
+import static BankManagementSystem.WelcomeScreen.conta;
 
 // Textblocks para reduzir o número de prints no código. O caractere '\s' adiciona um espaço em branco
 
@@ -33,7 +32,7 @@ public abstract class Textblocks {
     
     Opção desejada:\s""";
 
-    private static final String mainMenu = Accounts.getUserName() + """
+    private static final String mainMenu = """
             , seja bem-vindo ao seu Banco Pessoal!
                         
             Digite a letra relacionada ao serviço que deseja utilizar:
@@ -62,7 +61,7 @@ public abstract class Textblocks {
     }
 
     public static String getMainMenu() {
-        return mainMenu;
+        return conta.getUserName() + mainMenu;
     }
 
     public static String getWelcomeText() {

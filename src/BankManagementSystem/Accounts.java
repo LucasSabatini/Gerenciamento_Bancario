@@ -2,18 +2,22 @@ package BankManagementSystem;
 
 public class Accounts {
     //Choosing an account type
-    private static String userName;
-    private static String accountPassword;
-    private static char accountType;
+    private String userName;
+    private String accountPassword;
+    private char accountType;
 
     //Create Account
+    public Accounts(){
+
+    }
+
     public Accounts(String userName, String accountPassword, char accountType) {
         setUserName(userName);
         setAccountPassword(accountPassword);
         setAccountType(accountType);
     }
 
-    public static char printAccountType() {
+    public char printAccountType() {
         switch (accountType){
             case 'a' -> System.out.println("Conta Corrente!");
             case 'b' -> System.out.println("Conta Poupança!");
@@ -23,27 +27,27 @@ public class Accounts {
         return accountType;
     }
 
-    public static char getAccountType() {
+    public char getAccountType() {
         return accountType;
     }
 
-    public static String getUserName() {
+    public String getUserName() {
         return userName;
     }
 
     public void setUserName(String userName) {
-        Accounts.userName = userName;
+        this.userName = userName;
     }
 
-    public static String getAccountPassword() {
+    public String getAccountPassword() {
         return accountPassword;
     }
 
     public void setAccountPassword(String accountPassword) {
-        Accounts.accountPassword = accountPassword;
+        this.accountPassword = accountPassword;
     }
 
-    public static void setAccountType(char accountType) {
-        Accounts.accountType = accountType;
+    public void setAccountType(char accountType) {
+        this.accountType = accountType;
     }
 }

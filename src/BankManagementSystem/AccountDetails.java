@@ -1,14 +1,14 @@
 package BankManagementSystem;
 
-import static BankManagementSystem.Accounts.getAccountType;
-import static BankManagementSystem.WelcomeScreen.sc;
+import static BankManagementSystem.WelcomeScreen.conta;
+import static BankManagementSystem.Main.sc;
 
 public abstract class AccountDetails {
 
     //Mostrar informações da conta
     public static void getAccDetails(char accDet){
         sc.nextLine();
-        if(getAccountType() == 'a'){
+        if(conta.getAccountType() == 'a'){
             String tipoCorrente = """
             
             Informações da Conta Corrente:
@@ -17,7 +17,7 @@ public abstract class AccountDetails {
              - Tarifa de R$14,60 ao mês""";
             System.out.println(tipoCorrente);
         }
-        else if (getAccountType() == 'b') {
+        else if (conta.getAccountType() == 'b') {
             String tipoPoupanca = """
                       
             Informações da Conta Poupança:
@@ -26,7 +26,7 @@ public abstract class AccountDetails {
              - Taxa de rendimento de 0,5% ao mês""";
             System.out.println(tipoPoupanca);
         }
-        else if (getAccountType() == 'c'){
+        else if (conta.getAccountType() == 'c'){
             String tipoUniversitaria = """
             
             Informações da Conta Universitária:
