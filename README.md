@@ -1,13 +1,19 @@
-# Bank_Management_System
+# Sistema de Gerenciamento Bancário
 
 ### This is a https://favtutor.com website Java Project Challenge.
 
-O software permite ao usuário, via console, criar uma conta no banco e escolher o tipo de conta que desejará utilizar (cada uma com serviços e taxas diferenciados).
+---
+
+#### Versão 1.0
+
+O software permite ao usuário, via console, criar uma conta no banco e escolher o tipo de conta que desejará utilizar (serviços e taxas diferenciados).
 Além disso, é possível ao usuário acessar o menu do banco para utilizar as seguintes opções:
 
+    - Criar contas;
     - Exibir saldo;
     - Realizar saque;
     - Realizar depósito;
+    - Realizar transferências entre contas;
     - Exibir detalhes da conta;
     - Encerrar sessão.
 
