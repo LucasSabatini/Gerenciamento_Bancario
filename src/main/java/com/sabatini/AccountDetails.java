@@ -1,7 +1,7 @@
-package BankManagementSystem;
+package com.sabatini;
 
-import static BankManagementSystem.WelcomeScreen.conta;
 import static BankManagementSystem.Main.sc;
+import static BankManagementSystem.WelcomeScreen.conta;
 
 public abstract class AccountDetails {
 

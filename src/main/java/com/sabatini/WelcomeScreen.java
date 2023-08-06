@@ -1,4 +1,4 @@
-package BankManagementSystem;
+package com.sabatini;
 
 import java.util.Objects;
 

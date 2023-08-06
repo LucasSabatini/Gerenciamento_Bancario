@@ -1,4 +1,4 @@
-package BankManagementSystem;
+package com.sabatini;
 
 public class Accounts {
     //Choosing an account type
